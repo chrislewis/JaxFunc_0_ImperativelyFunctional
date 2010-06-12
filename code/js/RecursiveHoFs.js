@@ -1,5 +1,5 @@
 /*
- * Implementations of the functions defined in IterativeHoFs.js, but using
+ * Implementations of the higher-order functions defined in IterativeHoFs.js, but using
  * recursion instead.
  *
  * Chris Lewis (chris@thegodcode.net), for JaxFunc (http://www.meetup.com/JaxFunc/)

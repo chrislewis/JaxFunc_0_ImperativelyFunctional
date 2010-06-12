@@ -1,5 +1,5 @@
 /*
- * Initial iterative implementations of higher order functions each and map.
+ * Initial iterative implementations of higher-order functions each and map.
  *
  * Chris Lewis (chris@thegodcode.net), for JaxFunc (http://www.meetup.com/JaxFunc/) 
  */
