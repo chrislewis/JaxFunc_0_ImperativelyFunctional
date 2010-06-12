@@ -1,4 +1,9 @@
-
+/*
+ * Implementations of the functions defined in IterativeHoFs.js, but using
+ * recursion instead.
+ *
+ * Chris Lewis (chris@thegodcode.net), for JaxFunc (http://www.meetup.com/JaxFunc/)
+ */
 var R = {
 	
 	each: function(list, op) {
@@ -17,25 +22,6 @@ var R = {
 			acc.push(op(list[0]));
 			return R.map(list.slice(1), acc, op);
 		}
-	},
-	
-	filter: function(list, pred) { return R._filter(list, [], pred); },
-	
-	_filter: function(list, acc, pred) {
-		if(list.length == 0) 
-			return acc;
-		else {
-			if(pred(list[0]))
-				acc.push(list[0]);
-			return R._filter(list.slice(1), acc, pred);
-		}
-	},
-	
-	foldr: function(list, initial, op) {
-		if(list.length == 0)
-			return initial;
-		else
-			return R.foldr(list.slice(1), op(initial, list[0]), op);
 	}
 	
 }

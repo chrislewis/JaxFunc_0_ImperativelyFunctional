@@ -1,4 +1,8 @@
-
+/*
+ * Initial iterative implementations of higher order functions each and map.
+ *
+ * Chris Lewis (chris@thegodcode.net), for JaxFunc (http://www.meetup.com/JaxFunc/) 
+ */
 var I = {
 	
 	/*
@@ -24,28 +28,6 @@ var I = {
 		for(var i in list)
 			_new.push(f(list[i]));
 		return _new;
-	},
-	
-	/*
-	 * Given a list and a predicate, produce a new list from each element of
-	 * the original list for which the predicate is true.
-	 */
-	filter: function(list, pred) {
-		var _new = [];
-		for(var i in list)
-			if(pred(list[i]))
-				_new.push(list[i]);
-		return _new;
-	},
-	
-	foldr: function(list, initial, f) {
-		if(list.length == 0)
-			return initial;
-		else {
-			for(var i in list)
-				initial = f(initial, list[i]);
-			return initial;
-		}
 	}
 	
 }
