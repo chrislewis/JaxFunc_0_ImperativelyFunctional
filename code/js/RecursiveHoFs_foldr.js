@@ -31,6 +31,7 @@ var RF = {
 	 */
 	each: function(list, op) {
 		return RF.foldr(list, null, function(acc, i) {
+			op(i);
 			return list;
 		});
 	},
