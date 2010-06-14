@@ -6,18 +6,18 @@
  */
 object RF {
   
-  def foldr[A, B](list: List[A], acc: B, f: (B, A) => B): B = list match {
-    case Nil => acc
-    case head :: tail => foldr(tail, f(acc, head), f)
+  def foldr[A, B](f: (B, A) => B, init: B, list: List[A]): B = list match {
+    case Nil => init
+    case head :: tail => foldr(f, f(init, head), tail)
   }
   
-  def each[A](list: List[A], op: A => Unit): Unit = 
-    foldr(list, Nil, (acc: List[A], a: A) => { op(a); acc })
+  def each[A](list: List[A], op: A => Unit) = 
+    foldr((init: List[A], a: A) => { op(a); init }, Nil, list)
   
   def map[A, B](list: List[A], f: A => B) =
-    foldr(list, Nil, (l: List[B], a: A) => f(a) :: l)
+    foldr((l: List[B], a: A) => f(a) :: l, Nil, list)
   
   def filter[A](list: List[A], pred: A => Boolean) = 
-    foldr(list, Nil, (l: List[A], a: A) => if(pred(a)) a :: l else l)
+    foldr((l: List[A], a: A) => if(pred(a)) a :: l else l, Nil, list)
   
 }
