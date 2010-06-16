@@ -1,8 +1,11 @@
-/*
+package net.godcode.jaxfunc.zero
+
+/**
  * Things are a bit better in scala, because we can use pattern matching for
  * painless list extractions and a nice shorthand for anonymous functions.
  *
- * Chris Lewis (chris@thegodcode.net), for JaxFunc (http://www.meetup.com/JaxFunc/)
+ * Chris Lewis (chris@thegodcode.net),
+ * for JaxFunc (http://www.meetup.com/JaxFunc/)
  */
 object RF {
   

@@ -1,9 +1,10 @@
-/*
+/**
  * Here is an implementation of foldr (http://en.wikipedia.org/wiki/Fold_(higher-order_function),
  * followed by implementations of higher-order functions defined in terms
  * of folding.
  *
- * Chris Lewis (chris@thegodcode.net), for JaxFunc (http://www.meetup.com/JaxFunc/) 
+ * Chris Lewis (chris@thegodcode.net),
+ * for JaxFunc (http://www.meetup.com/JaxFunc/) 
  */
 var RF = {
 	
