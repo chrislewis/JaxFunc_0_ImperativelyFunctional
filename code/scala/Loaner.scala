@@ -36,13 +36,13 @@ object Loaner {
    *   r.write("my name is chris.")
    * }
    *
-   * Lastly, note the use of generics as well as the structural mixin,
-   * "A with R". This says to the compiler that "res" will be any type, locally
+   * Lastly, note the use of generics, specifically "A <: R".
+   * This says to the compiler that "res" will be an instance of type, locally
    * known as "A", that supports all methods indicated in "R", which is our
    * structural type. This gives us lots of flexibility, compile-time safety
    * via static checking, with little noise.
    */
-  def using[A, B](res: A with R)(op: A => B) = {
+  def using[A <: R, B](res: A)(op: A => B) = {
     try {
       op(res)
     } finally {
