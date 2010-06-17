@@ -1,8 +1,11 @@
 /**
  * Here is an implementation of foldr (http://en.wikipedia.org/wiki/Fold_(higher-order_function),
  * followed by implementations of higher-order functions defined in terms
- * of folding.
- *
+ * of folding. Note that the HoFs using foldr are still somewhat verbose. This
+ * is because of JS's syntax for anonymous functions and, more importantly,
+ * because it doesn't support partial funciton application. We can do better
+ * in Scala, and better still in Haskell.
+ * 
  * Chris Lewis (chris@thegodcode.net),
  * for JaxFunc (http://www.meetup.com/JaxFunc/) 
  */
